@@ -1,0 +1,8 @@
+<!-- Search form for the weather -->
+
+<h2> Look up Weather </h2>
+<%= form_with(url: weather_search_path, method: 'get', local: true) do |form| %>
+    <%= form.label :postcode, "Type in your Postcode "%>
+    <%= form.text_field :postcode, placeholder: 'E.g. TW6 1AP' %>
+    <%= form.button "Search" %>
+<% end %>
